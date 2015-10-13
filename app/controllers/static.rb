@@ -8,8 +8,7 @@ get '/sign_up' do
 end
 
 post '/sign_up/create' do
-	user.create(params[:user])
-
+	@creator = User.create(params[:user])
 	redirect '/'
 end
 
