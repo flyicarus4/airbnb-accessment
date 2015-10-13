@@ -22,14 +22,15 @@ get '/user_profile' do
 	erb :"user_profile"
 end
 
-#Show all Users
-post '/show_user' do
-	@view = users.all
+#Login authentication
+post '/authenticate' do
+	
 end
 
 #Creates User
 post '/sign_up/create' do
 	@creator = User.create(params[:user])
+	@users = User.all.username
 	redirect '/'
 end
 
@@ -40,6 +41,7 @@ post '/property_new/create' do
 
 	@property = Property.create(params[:property])
 	@property.user = @finder
+	@all_properties = Property.all
 
 	redirect '/property_view'
 end
