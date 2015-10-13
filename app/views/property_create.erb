@@ -11,10 +11,11 @@
     <a href='/property_view'><input type='button' name='' value='Properties'/></a>
   </nav>
 
-  <form action='' method=''>
+  <form action='/property_new/create' method='POST'>
   <p>Please fill in the entries</p>
   <p>Location: </p><input type='text' name='property[location]' value=''/>
   <p>availability: </p><input type='text' name='property[availability]' value=''/>
+  <p>user_id: </p><input type='text' name='username' value=''>
 
   <input type='submit' name='' value='Create Property'/>
   </form>
