@@ -9,6 +9,8 @@ end
 
 #Property Page
 get '/property_view' do
+	@available = Property.available?
+	@show = Property.print
 	erb :"property_view"
 end
 

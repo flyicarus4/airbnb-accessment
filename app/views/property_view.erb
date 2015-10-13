@@ -13,7 +13,16 @@
   </nav>
 
   <p>list of Properties</p>
+  <table border=1>
+  	<tr>
+  		<th>place</th>
+  		<th>availability</th>
+  	</tr>
 
-  <%= @property %>
+  	<tr>
+  		<td><%= @show %></td>
+  		<td><%= @available %></td>
+  	</tr>
+  </table>
  </body>
 </html>
