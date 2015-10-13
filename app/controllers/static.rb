@@ -24,7 +24,14 @@ end
 
 #Login authentication
 post '/authenticate' do
-	
+	a = params[:username]
+	b = params[:password]
+
+	if User.authenticate(a, b) == true
+		redirect '/property_view'
+	else
+		redirect '/'
+	end
 end
 
 #Creates User
@@ -36,11 +43,7 @@ end
 
 #Creates Property
 post '/property_new/create' do
-	@finder = User.find_by(username: params[:username])
-	@finder
-
 	@property = Property.create(params[:property])
-	@property.user = @finder
 	@all_properties = Property.all
 
 	redirect '/property_view'
