@@ -4,5 +4,5 @@ end
 
 #Create User
 get '/sign_up' do
-	erb :""
+	erb :"sign_up"
 end
