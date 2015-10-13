@@ -8,4 +8,8 @@ class User < ActiveRecord::Base
 			return false
 		end 
 	end
+
+	def self.print
+		User.first.username
+	end
 end

@@ -19,6 +19,7 @@ end
 
 #User Profile Page
 get '/user_profile' do
+	@render = User.print
 	erb :"user_profile"
 end
 
@@ -37,7 +38,6 @@ end
 #Creates User
 post '/sign_up/create' do
 	@creator = User.create(params[:user])
-	@users = User.all.username
 	redirect '/'
 end
 
