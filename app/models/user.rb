@@ -10,6 +10,6 @@ class User < ActiveRecord::Base
 	end
 
 	def self.print
-		User.first.username
+		User.first
 	end
 end

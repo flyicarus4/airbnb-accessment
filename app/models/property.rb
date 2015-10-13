@@ -2,10 +2,10 @@ class Property < ActiveRecord::Base
 	belongs_to :user
 
 	def self.print
-		Property.first.location
+		Property.first
 	end
 
 	def self.available?
-		Property.first.availability
+		Property.first
 	end
 end
