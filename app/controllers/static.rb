@@ -2,9 +2,15 @@ get '/' do
   erb :"static/index"
 end
 
-#Create User
+#User Page
 get '/sign_up' do
 	erb :"sign_up"
+end
+
+post '/sign_up/create' do
+	user.create(params[:user])
+
+	redirect '/'
 end
 
 #Show Property
