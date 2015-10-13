@@ -3,7 +3,7 @@ class CreateProperties < ActiveRecord::Migration
 		create_table :properties do |t|
 			t.string :location
 			t.string :availability
-			t.belongs_to :user
+			t.belongs_to :user, null: false
 
 			t.timestamps null: false
 		end
